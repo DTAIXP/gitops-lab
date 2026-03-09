@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-lab-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitops-lab-web
+  template:
+    metadata:
+      labels:
+        app: gitops-lab-web
+    spec:
+      containers:
+        - name: web
+          image: gitops-lab-web:v2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
