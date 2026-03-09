@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: web
-          image: gitops-lab-web:v3
+          #image: ghcr.io/dtaixp/gitops-lab-web:v3
+          image: ghcr.io/dtaixp/gitops-lab-web:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
