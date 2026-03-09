@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: gitops-lab-web:v2
+          image: gitops-lab-web:v3
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
