@@ -12,9 +12,10 @@ spec:
       labels:
         app: gitops-lab-web
     spec:
+      nodeSelector:
+        kubernetes.io/hostname: gitops-lab-control-plane
       containers:
         - name: web
-          #image: ghcr.io/dtaixp/gitops-lab-web:25b426c
           image: ghcr.io/dtaixp/gitops-lab-web:25b426c
           imagePullPolicy: IfNotPresent
           ports:
